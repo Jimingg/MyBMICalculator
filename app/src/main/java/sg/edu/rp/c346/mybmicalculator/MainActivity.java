@@ -73,8 +73,15 @@ public class MainActivity extends AppCompatActivity {
                     tvOut.setText("You are overweight");
                 }else if (BMI>=30){
                     tvOut.setText("You are obese");
-                }
 
+                }
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                SharedPreferences.Editor prefEdit = prefs.edit();
+                prefEdit.putFloat("BMI",BMI);
+                prefEdit.putString("datetime",datetime);
+                prefEdit.commit();
+                etweight.setText("");
+                etheight.setText("");
             }
         });
     }
@@ -92,11 +99,7 @@ public class MainActivity extends AppCompatActivity {
                     now.get(Calendar.YEAR) + " " +
                     now.get(Calendar.HOUR_OF_DAY) + ":" +
                     now.get(Calendar.MINUTE);
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            SharedPreferences.Editor prefEdit = prefs.edit();
-            prefEdit.putFloat("BMI",BMI);
-            prefEdit.putString("datetime",datetime);
-            prefEdit.commit();
+
         }
 
     }
