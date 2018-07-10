@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sg.edu.rp.c346.mybmicalculator.MainActivity">
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/weight"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/height"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/calulate" />
+
+        <Button
+            android:id="@+id/buttonResetData"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/Reset" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="@string/date" />
+
+    <TextView
+        android:id="@+id/textViewBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/BMI" />
+
+    <TextView
+        android:id="@+id/textViewOutcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
